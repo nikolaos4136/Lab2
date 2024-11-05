@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Nikolaos' quiz</title>
+    <title>The quiz webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Welcome to Nikolaos' quiz!</h1>
 
+    <form id="quizForm">
+        <fieldset>
+            <legend>Visitor's Information</legend>
+            <div class="personalInfo">
+                <label>First Name: <input type="text" id="firstName" required></label>
+                <label>Last Name: <input type="text" id="lastName" required></label>
+                <label>Email: <input type="email" id="email" required></label>
+            </div>
+            <div id="firstNameError" class="errorMessage"></div>
+            <div id="lastNameError" class="errorMessage"></div>
+            <div id="emailError" class="errorMessage"></div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Quiz Questions</legend>
+            <p>1. What is the capital of Vietnam? *</p>
+            <label><input type="radio" name="q1" value="Hanoi" required> Hanoi</label>
+            <label><input type="radio" name="q1" value="Osaka"> Osaka</label>
+            <div id="q1Error" class="errorMessage"></div>
+            
+            <p>2. Which of these languages is not used for web development? *</p>
+            <label><input type="checkbox" name="q2" value="HTML" required> HTML</label>
+            <label><input type="checkbox" name="q2" value="CSS"> CSS</label>
+            <label><input type="checkbox" name="q2" value="Cobol"> Cobol</label>
+            <div id="q2Error" class="errorMessage"></div>
+
+            <p>3. Where Socrates came from?</p>
+            <label><input type="radio" name="q3" value="Greece"> Greece</label>
+            <label><input type="radio" name="q3" value="Italy"> Italy</label>
+            <div id="q3Error" class="errorMessage"></div>
+            
+            <p>4. Select your favorite color:</p>
+            <label><input type="checkbox" name="q4" value="Red"> Red</label>
+            <label><input type="checkbox" name="q4" value="Blue"> Blue</label>
+            <label><input type="checkbox" name="q4" value="Black"> Black</label>
+            <div id="q4Error" class="errorMessage"></div>
+
+            <p>5. What is your favorite hobby:</p>
+            <label><textarea id="q5"></textarea></label>
+            <div id="q5Error" class="errorMessage"></div>
+        </fieldset>
+        
+        <button type="submit">Submit</button>
+    </form>
 
 </body>
 <script src="nikolaos.js"></script>
