@@ -36,3 +36,18 @@ legend {
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
+.btn:hover {
+    background-color: #5F8575;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #89de89;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+    align-self: flex-start;
+}
