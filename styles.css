@@ -51,3 +51,31 @@ legend {
     width: 150px;
     align-self: flex-start;
 }
+
+label {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.successMessage {
+    color: green;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 15px;
+}
