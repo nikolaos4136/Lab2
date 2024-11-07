@@ -49,6 +49,7 @@ legend {
     cursor: pointer;
     border-radius: 5px;
     width: 150px;
+    transition: ease 0.2s;
     align-self: flex-start;
 }
 
