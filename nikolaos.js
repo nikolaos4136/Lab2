@@ -3,8 +3,8 @@ function containsOnlyLetters(string) {
         if (!(string[i] >= 'A' && string[i] <= 'Z') && !(string[i] >= 'a' && string[i] <= 'z')) {
             return false;
         }
-        return true;
     }
+    return true;
 }
 
 
@@ -39,6 +39,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
     }
 
     if (isValid) {
+        document.getElementById('quizForm').submit();
         document.getElementById("messageDiv").textContent = "Form submitted succesfully!";
     }   
 })
