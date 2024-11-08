@@ -7,6 +7,14 @@ function containsOnlyLetters(string) {
     return true;
 }
 
+function isEmailValid(email) {
+    let validEmailForm = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (validEmailForm.test(email)) {
+        return true;
+    }
+    return false;
+}
+
 
 document.getElementById('quizForm').addEventListener('submit', function(event){
 
@@ -16,7 +24,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
 
     document.getElementById('firstNameError').textContent = "";
     document.getElementById('lastNameError').textContent = "";
-    document.getElementById('email').textContent = "";
+    document.getElementById('emailError').textContent = "";
     document.getElementById('messageDiv').textContent = "";
 
     var firstName = document.getElementById('firstName').value;
@@ -33,8 +41,8 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         isValid = false;
     }
 
-    if (!emailAddress.includes("@")){
-        document.getElementById('emailError').textContent = "Please use a valid email address(include @)!";
+    if (!isEmailValid(emailAddress)) {
+        document.getElementById('emailError').textContent = "Please use a valid email address!";
         isValid = false;
     }
 
